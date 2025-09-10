@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class KartyaJatek {
     static String[] pakli = new String[22];
-     static Scanner scanner = new Scanner(System.in);
+     static Scanner sc = new Scanner(System.in);
 
     
     public static void main(String[] args) {
@@ -19,8 +19,12 @@ public class KartyaJatek {
 
     private static void indito() {
         Osszeallit();
+        for (int i = 0; i < 3; i++) {
         Kirak();
         beker();
+        kever();
+        }
+       melyikvolt();
     }
     
     
@@ -53,18 +57,27 @@ public class KartyaJatek {
         
     }
 
-    private static void beker() {
+    private static int beker() {
         boolean jo;
         int oszlop;
         
         do {
-            System.out.print("Válassz egy kártyát a pakliból (1-től 22-ig): ");
-        } while (jo);
+            System.out.print("melyik oszlop (1-3): ");
+            oszlop = sc.nextInt();
+            jo = oszlop <= 1 && oszlop <= 3;
+        } while (!jo);
+        return oszlop;
         
-        int valasztottIndex = scanner.nextInt() - 1;
     }
     
     
     
-    private static void kever(){}
+    private static void kever(){
+
 }
+
+
+    private static void melyikvolt(){
+        System.out.println("");
+}
+    }
