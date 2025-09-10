@@ -17,7 +17,7 @@ public class KartyaJatek {
         
     }
     private static void Osszeallit(){
-        int index = 0;
+        int index = 1;
         
         String[] szinek = {"P","T","Z","M"};
         String[] ertekek = {"Ász","Kir","Fel","X","IX","VIII"};
@@ -25,17 +25,22 @@ public class KartyaJatek {
         
         for (int i = 0; i < szinek.length; i++) {
              for (int j = 0; j < ertekek.length; j++) {
-                 pakli[index] = szinek[i] + " " + ertekek[j];
-                 i++;
+                 pakli[index++] = szinek[i] + "_" + ertekek[j];
+                 
              }
+        }
+        for (int i = 0; i < 3; i++) {
+             pakli[index++] = szinek[3] + "_" + ertekek[i];
         }
         }
     
     private static void Kirak(){
-        for (int i = 0; i < 7; i++) {
-            for (int j = 0; j < 10; i++) {
-            System.out.println(pakli[i]);
-        }
+        for (int i = 1; i < pakli.length; i++) {
+            System.out.printf("%-7s".formatted(pakli[i]));
+            if (i % 3 == 0) {
+                System.out.println("\n");
+            }
+        
         }
         
     }
