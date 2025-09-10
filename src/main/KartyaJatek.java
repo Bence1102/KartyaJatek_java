@@ -1,21 +1,29 @@
 
 package main;
 
+import java.util.Scanner;
+
 
 public class KartyaJatek {
     static String[] pakli = new String[22];
-    static String[] ertekek = new String[6];
-    static String[] szinek = new String[4];
+     static Scanner scanner = new Scanner(System.in);
+
     
     public static void main(String[] args) {
         
-        Osszeallit();
-        Kirak();
-         
+        indito();
          
          
         
     }
+
+    private static void indito() {
+        Osszeallit();
+        Kirak();
+        beker();
+    }
+    
+    
     private static void Osszeallit(){
         int index = 1;
         
@@ -23,7 +31,7 @@ public class KartyaJatek {
         String[] ertekek = {"Ász","Kir","Fel","X","IX","VIII"};
         
         
-        for (int i = 0; i < szinek.length; i++) {
+        for (int i = 0; i < szinek.length-1; i++) {
              for (int j = 0; j < ertekek.length; j++) {
                  pakli[index++] = szinek[i] + "_" + ertekek[j];
                  
@@ -44,5 +52,19 @@ public class KartyaJatek {
         }
         
     }
+
+    private static void beker() {
+        boolean jo;
+        int oszlop;
+        
+        do {
+            System.out.print("Válassz egy kártyát a pakliból (1-től 22-ig): ");
+        } while (jo);
+        
+        int valasztottIndex = scanner.nextInt() - 1;
+    }
     
+    
+    
+    private static void kever(){}
 }
