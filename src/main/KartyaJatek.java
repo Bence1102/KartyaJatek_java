@@ -21,7 +21,6 @@ public class KartyaJatek {
         Osszeallit();
         for (int i = 0; i < 3; i++) {
         Kirak();
-        //beker();
         kever();
         }
        melyikvolt();
@@ -92,27 +91,28 @@ public class KartyaJatek {
 
     switch (oszlop) {
         case 1:
-            for (int i = 0; i < 7; i++) pakli[index++] = oszlop2[i];
-            for (int i = 0; i < 7; i++) pakli[index++] = oszlop1[i];
-            for (int i = 0; i < 7; i++) pakli[index++] = oszlop3[i];
+            for (int i = 0; i < 7; i++) pakli[index++] = oszlop2[i]; //[20-(i-1)*3]
+            for (int i = 0; i < 7; i++) pakli[index++] = oszlop1[i]; //[19-(i-1)*3]
+            for (int i = 0; i < 7; i++) pakli[index++] = oszlop3[i]; //[21-(i-1)*3]
         break;
         
         case 2:
-            for (int i = 0; i < 7; i++) pakli[index++] = oszlop1[i];
-            for (int i = 0; i < 7; i++) pakli[index++] = oszlop2[i];
-            for (int i = 0; i < 7; i++) pakli[index++] = oszlop3[i];
+            for (int i = 0; i < 7; i++) pakli[index++] = oszlop1[i]; //[19-(i-1)*3]
+            for (int i = 0; i < 7; i++) pakli[index++] = oszlop2[i]; //[20-(i-1)*3]
+            for (int i = 0; i < 7; i++) pakli[index++] = oszlop3[i]; //[21-(i-1)*3]
         break;
         
         case 3:
            
-            for (int i = 0; i < 7; i++) pakli[index++] = oszlop1[i];
-            for (int i = 0; i < 7; i++) pakli[index++] = oszlop3[i];
-            for (int i = 0; i < 7; i++) pakli[index++] = oszlop2[i];
+            for (int i = 0; i < 7; i++) pakli[index++] = oszlop1[i]; //[19-(i-1)*3]
+            for (int i = 0; i < 7; i++) pakli[index++] = oszlop3[i]; //[21-(i-1)*3]
+            for (int i = 0; i < 7; i++) pakli[index++] = oszlop2[i]; //[20-(i-1)*3]
             break;
 
         }  
     }
     private static void melyikvolt(){
         System.out.println("A gondolt lap  " + pakli[11]);
+        
     }
 }
