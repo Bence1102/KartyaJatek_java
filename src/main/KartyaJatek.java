@@ -21,7 +21,7 @@ public class KartyaJatek {
         Osszeallit();
         for (int i = 0; i < 3; i++) {
         Kirak();
-        beker();
+        //beker();
         kever();
         }
        melyikvolt();
@@ -113,6 +113,6 @@ public class KartyaJatek {
         }  
     }
     private static void melyikvolt(){
-        System.out.println("");
+        System.out.println("A gondolt lap  " + pakli[11]);
     }
 }
