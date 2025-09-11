@@ -73,26 +73,46 @@ public class KartyaJatek {
     
     
     private static void kever(){
-      int kever=3;
-      switch (kever){
-          case 1: 
-              for (int i = 1; i < 7; i++) {
-                 
-              }
-          case 2: 
-              for (int i = 1; i < 7; i++) {
-                 
-              }
-          case 3: 
-              for (int i = 1; i < 7; i++) {
-                 
-              }
-      }
-      
-}
+        String[] oszlop1 = new String[7];
+        String[] oszlop2 = new String[7];
+        String[] oszlop3 = new String[7];
 
+        int index = 1;
 
+   
+        for (int i = 0; i < 7; i++) {
+            oszlop1[i] = pakli[index++];
+            oszlop2[i] = pakli[index++];
+            oszlop3[i] = pakli[index++];
+        }
+
+    int oszlop = beker();
+
+    index = 1;
+
+    switch (oszlop) {
+        case 1:
+            for (int i = 0; i < 7; i++) pakli[index++] = oszlop2[i];
+            for (int i = 0; i < 7; i++) pakli[index++] = oszlop1[i];
+            for (int i = 0; i < 7; i++) pakli[index++] = oszlop3[i];
+        break;
+        
+        case 2:
+            for (int i = 0; i < 7; i++) pakli[index++] = oszlop1[i];
+            for (int i = 0; i < 7; i++) pakli[index++] = oszlop2[i];
+            for (int i = 0; i < 7; i++) pakli[index++] = oszlop3[i];
+        break;
+        
+        case 3:
+           
+            for (int i = 0; i < 7; i++) pakli[index++] = oszlop1[i];
+            for (int i = 0; i < 7; i++) pakli[index++] = oszlop3[i];
+            for (int i = 0; i < 7; i++) pakli[index++] = oszlop2[i];
+            break;
+
+        }  
+    }
     private static void melyikvolt(){
         System.out.println("");
-}
     }
+}
