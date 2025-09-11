@@ -96,7 +96,13 @@ public class KartyaJatek {
             for (int i = 0; i < 7; i++) pakli[index++] = oszlop1[i];
             for (int i = 0; i < 7; i++) pakli[index++] = oszlop3[i];
         break;
-        }
+        
+        case 2:
+            for (int i = 0; i < 7; i++) pakli[index++] = oszlop1[i];
+            for (int i = 0; i < 7; i++) pakli[index++] = oszlop2[i];
+            for (int i = 0; i < 7; i++) pakli[index++] = oszlop3[i];
+        break;
+        }  
     }
     private static void melyikvolt(){
         System.out.println("");
