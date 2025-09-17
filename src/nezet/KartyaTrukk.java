@@ -1,15 +1,30 @@
 
-package main;
+package nezet;
 
 import java.util.Scanner;
-
 
 
 public class KartyaTrukk {
     static Scanner sc = new Scanner(System.in);
     
+    
+    
+    public static void main(String[] args) {
+    indito();
+    
+}
      private static void indito() {
-       
+        modell.Pakli pakli = new modell.Pakli(); 
+        pakli.Kirak(); 
+
+    for (int i = 0; i < 3; i++) {
+        int oszlop = beker(); 
+        pakli.kever(oszlop); 
+        pakli.Kirak(); 
+    }
+
+    
+    System.out.println("\nEz volt a lapod: " + pakli.ezVolt());
          
     }
      
@@ -25,10 +40,4 @@ public class KartyaTrukk {
         return oszlop;
         
     }
-     
-     private static int MelyikVolt(int oszlop){
-         
-        return 0;
-         
-     }
 }
