@@ -8,7 +8,7 @@ public class Pakli {
     private Lap[] lapok;
     
     
-    public void Pakli(){
+    public Pakli(){
         lapok = new Lap[22];
         feltolt();
     }
@@ -31,14 +31,16 @@ public class Pakli {
         }
     }
     
-    public void Kirak(){
+    public String Kirak(){
+        String s = "";
         for (int i = 1; i < lapok.length; i++) {
-            System.out.printf("%-7s".formatted(lapok[i].toString()));
+            s+=String.format("%-7s",(lapok[i].toString()));
             if (i % 3 == 0) {
-                System.out.println("\n");
+                s+=("\n");
             }
         
         }
+        return s;
     }
     
     public void kever(int oszlop){
@@ -83,8 +85,8 @@ public class Pakli {
         }
     }
     
-    public String ezVolt(){
-        return lapok[11].toString();
+    public Lap ezVolt(){
+        return lapok[11];
     } 
     
 }
